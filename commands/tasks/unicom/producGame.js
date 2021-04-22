@@ -445,20 +445,20 @@ var producGame = {
         allgames_1 = iosList.popularList.filter(a => a.state === '1')
 
         console.info('剩余未领取game', allgames.length+allgames_1.length)
-        for (let game of allgames){
-            await new Promise((resolve, reject) => setTimeout(resolve, (Math.floor(Math.random() * 10) + 15) * 1000))
-            await producGame.gameFlowGet(axios, {
-                ...options,
-                gameId: game.id
-            },'Android')
-        }
-        for (let game of allgames_1) {
-            await new Promise((resolve, reject) => setTimeout(resolve, (Math.floor(Math.random() * 10) + 15) * 1000))
-            await producGame.gameFlowGet(axios, {
-                ...options,
-                gameId: game.id
-            },'iOS')
-        }
+        // for (let game of allgames){
+        //     await new Promise((resolve, reject) => setTimeout(resolve, (Math.floor(Math.random() * 10) + 15) * 1000))
+        //     await producGame.gameFlowGet(axios, {
+        //         ...options,
+        //         gameId: game.id
+        //     },'Android')
+        // }
+        // for (let game of allgames_1) {
+        //     await new Promise((resolve, reject) => setTimeout(resolve, (Math.floor(Math.random() * 10) + 15) * 1000))
+        //     await producGame.gameFlowGet(axios, {
+        //         ...options,
+        //         gameId: game.id
+        //     },'iOS')
+        // }
     },
     doGameIntegralTask: async (axios, options) => {
         let {games, jar} = await producGame.getTaskList(axios, options)
