@@ -7,7 +7,7 @@
   "author": "lunnlew",
   "license": "MIT",
   "scripts": {
-    "run": "node index.js unicom --user 15617152726 --password 295311 --appid 1f7af72ad6912d306b5053abf90c7ebbee45ffb923a84076799d76b9d8507d9b3ed5c8c7fbbb302b188a61e1c5228c1840dda28ae5cedba5f64b31db104c8a8e --tasks dailygameflow"
+    "run": "node index.js unicom "
   },
   "dependencies": {
     "axios": ">=0.21.1",
